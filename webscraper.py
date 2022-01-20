@@ -8,12 +8,15 @@ soup = BeautifulSoup(page.content, "html.parser")
 
 # get the main container the content is in. I tried making the scraper get the spins-char here and skipping the next
 # line but that broke the iterations
-results = soup.find("div", class_="main-container")
+#results = soup.find_all("div", class_="main-container")
 
-song_elements = results.find("table", class_="table table-striped table-bordered")
+# get the table and its elements
+song_elements = soup.find_all("td", class_="spin-text")
 
-for element in song_elements.contents[0].children:
-    artistName = element.find("span", class_="song")
+#print(song_elements)
+# iterate through the table and get the artist name, song title, and album name
+for element in song_elements:
+    artistName = element.find("span", class_="artist")
     songName = element.find("span", class_="song")
     albumName = element.find("span", class_="release")
     print(artistName.text)
