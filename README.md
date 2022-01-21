@@ -2,10 +2,11 @@
 The goal is to make a tool to turn a published playlist from the radio station 103.3 WPRB (New Jersey's only radio station) into a Spotify playlist
 
 Right now I am planning to use the following solutions to get this done,
-    BeautifulSoup - Python backend web scraper
-    Flask - Host Python API
-    React - Call Spotify API and my Python API
-    Spotify API - Auth user, search songs returned from my API, and add those songs to a new playlist in the users library
+
+	*BeautifulSoup - Python backend web scraper
+	*Flask - Host Python API
+	*React - Call Spotify API and my Python API
+	*Spotify API - Auth user, search songs returned from my API, and add those songs to a new playlist in the users library
     
 Looking to dip into Docker in the future to host but that will be outside the scope of my MVP.
 
